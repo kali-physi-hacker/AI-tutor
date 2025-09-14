@@ -4,6 +4,7 @@ An LLM‑powered STEM tutoring platform that lets learners study structured cour
 
 Quick links
 - docs: `llm-tutor/docs/ARCHITECTURE.md`, `llm-tutor/docs/API.md`, `llm-tutor/docs/RAG.md`, `llm-tutor/docs/SECURITY.md`
+  - user guide: `llm-tutor/docs/USER_GUIDE.md`
 - backend entry: `llm-tutor/backend/app/main.py`
 - frontend entry: `llm-tutor/frontend/src/main.tsx`
 - compose: `llm-tutor/infra/docker-compose.yml`
