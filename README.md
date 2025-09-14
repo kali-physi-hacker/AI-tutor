@@ -24,6 +24,7 @@ Tech Stack
 
 Repository Layout
 
+```
 llm-tutor/
   backend/
     app/
@@ -63,6 +64,7 @@ llm-tutor/
   .github/workflows/ci.yml
   .env.example
   Makefile
+```
 
 Use Cases
 - Learn a lesson: Browse courses, open a lesson, read Markdown content with math/code blocks, then continue in chat with “Ask about this lesson”.
@@ -79,7 +81,8 @@ Option A — Docker Compose (recommended)
 3) Start stack: `make up`
    - Backend: http://localhost:8000 (health: `/healthz`)
    - Frontend: http://localhost:5173
-   - Postgres: `ankane/pgvector:pg16` with `vector` extension preinstalled
+- Postgres: `ankane/pgvector:pg16` with `vector` extension preinstalled
+ - Postgres: `pgvector/pgvector:pg16` with `vector` extension preinstalled
 4) Seed sample courses: `python llm-tutor/scripts/seed.py` (in a venv with backend deps) or add via DB.
 5) Stop stack: `make down`
 
@@ -168,4 +171,3 @@ Troubleshooting
 - pgvector errors locally: ensure `CREATE EXTENSION vector;` on your DB; compose uses `ankane/pgvector:pg16`
 - Upload blocked: ensure you’re logged in so `Authorization` and cookies are present
 - Worker not indexing: check Redis connectivity and Celery logs
-
